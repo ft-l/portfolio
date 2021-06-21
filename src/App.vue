@@ -5,36 +5,44 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      <v-spacer/>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+      <div class="d-flex align-center">
+        <h2>William Skaggs</h2>
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
+      <v-spacer/>
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+          href="https://github.com/iamwood"
+          target="_blank"
+          fab
+          small
+          color="secondary"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon dark>
+          mdi-file
+        </v-icon>
       </v-btn>
+
+      <v-btn
+        href="https://github.com/iamwood"
+        target="_blank"
+        fab
+        small
+        color="secondary"
+      >
+        <v-icon dark>
+          mdi-github
+        </v-icon>
+      </v-btn>
+
+      <v-spacer/>
+
     </v-app-bar>
 
     <v-main>
@@ -45,6 +53,8 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import { mdiGithub } from '@mdi/js'
+import { mdiFile } from '@mdi/js'
 
 export default {
   name: 'App',
@@ -54,7 +64,19 @@ export default {
   },
 
   data: () => ({
-    //
+    icons: {
+      mdiGithub,
+      mdiFile
+    }
   }),
 };
 </script>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+h2 {
+  font-family: 'Inconsolata', monospace;
+}
+
+</style>
